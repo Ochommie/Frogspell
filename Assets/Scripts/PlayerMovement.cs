@@ -8,6 +8,9 @@ public class PlayerMovement : MonoBehaviour
     private bool isMoving;
     private Vector2 input;
     public LayerMask solidObjectsLayer;
+
+    public LayerMask interactablesLayer;
+
     private void Update()
     {
         if (!isMoving)
@@ -19,12 +22,36 @@ public class PlayerMovement : MonoBehaviour
 
             if (input != Vector2.zero)
             {
+                //Animator.SetFloat("moveX", input.x);
+                //Animator.SetFloat("moveY", input.y);
+
+
                 var targetPos = transform.position;
                 targetPos.x += input.x;
                 targetPos.y += input.y;
 
                 if (IsWalkable(targetPos))
                     StartCoroutine(Move(targetPos));
+            }
+        }
+
+        //animator.SetBool("isMoving", isMoving);
+
+        if (Input.GetKeyDown(KeyCode.Z))
+        { 
+
+            Interact();
+    }
+
+        void Interact()
+        {
+            //var facingDir = new Vector3(Animator.GetFloat("moveX"), Animator.GetFloat("moveY"));
+            //var interactPos = transform.position + facingDir;
+
+            var collider = Physics2D.OverlapCircle(interactPos, 02f, interactablesLayer);
+            if(collider != null)
+            {
+                Debug.Log("There's an npc here");
             }
         }
     }
@@ -44,7 +71,7 @@ public class PlayerMovement : MonoBehaviour
 
     private bool IsWalkable(Vector3 targetPos)
     {
-        if (Physics2D.OverlapCircle(targetPos, 0.2f, solidObjectsLayer) != null)
+        if (Physics2D.OverlapCircle(targetPos, 0.2f, solidObjectsLayer | interactablesLayer) != null)
         {
             return false;
         }
