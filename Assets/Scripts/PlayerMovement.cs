@@ -35,25 +35,26 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
+
+
         //animator.SetBool("isMoving", isMoving);
 
         if (Input.GetKeyDown(KeyCode.Z))
-        { 
-
             Interact();
     }
 
-        void Interact()
-        {
-            //var facingDir = new Vector3(Animator.GetFloat("moveX"), Animator.GetFloat("moveY"));
-            //var interactPos = transform.position + facingDir;
+    void Interact()
+    {
+        var facingDir = new Vector3();
+        var interactPos = transform.position + facingDir;
+        //Debug.DrawLine(transform.position, interactPos, Color.red, 1f);
 
-            var collider = Physics2D.OverlapCircle(interactPos, 02f, interactablesLayer);
-            if(collider != null)
-            {
-                Debug.Log("There's an npc here");
-            }
+        var collider = Physics2D.OverlapCircle(interactPos, 1f, interactablesLayer);
+        if (collider != null)
+        {
+          Debug.Log("Here is a NPC");
         }
+
     }
 
     IEnumerator Move(Vector3 targetPos)
