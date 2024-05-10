@@ -11,7 +11,7 @@ public class PlayerMovement : MonoBehaviour
 
     public LayerMask interactablesLayer;
 
-    private void Update()
+    public void Update()
     {
         if (!isMoving)
         {
@@ -52,7 +52,7 @@ public class PlayerMovement : MonoBehaviour
         var collider = Physics2D.OverlapCircle(interactPos, 1f, interactablesLayer);
         if (collider != null)
         {
-          Debug.Log("Here is a NPC");
+            collider.GetComponent<INteractable>()?.Interact();
         }
 
     }
