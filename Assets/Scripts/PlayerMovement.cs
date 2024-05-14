@@ -18,7 +18,8 @@ public class PlayerMovement : MonoBehaviour
     {
         audiosource = GetComponent<AudioSource>();
     }
-    public void Update()
+
+    public void HandleUpdate()
     {
         if (!isMoving)
         {
