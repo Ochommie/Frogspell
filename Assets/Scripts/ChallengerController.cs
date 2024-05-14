@@ -8,6 +8,6 @@ public class ChallengerController : MonoBehaviour, INteractable
     public void Interact()
 
     {
-        Debug.Log("There's a challenger here");
+        Debug.Log("Battle Time!");
     }
 }

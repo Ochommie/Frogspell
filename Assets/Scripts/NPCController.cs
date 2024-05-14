@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class NPCController : MonoBehaviour, INteractable
 {
-
-    [SerializeField] Dialogue dialogue;
-
+    private int dialogIndex = 0;
+    [SerializeField] Dialogue[] dialog;
 
     public void Interact()
 
     {
-        DialogueManager.Instance.ShowDialogue(dialogue);
+        StartCoroutine(DialogueManager.Instance.ShowDialogue(dialog[dialogIndex]));
+        if (dialogIndex<=dialog.Length)
+        dialogIndex++;
     }
 }
