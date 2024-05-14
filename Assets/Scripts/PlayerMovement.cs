@@ -11,7 +11,7 @@ public class PlayerMovement : MonoBehaviour
 
     public LayerMask interactablesLayer;
 
-    public void Update()
+    public void HandleUpdate()
     {
         if (!isMoving)
         {
