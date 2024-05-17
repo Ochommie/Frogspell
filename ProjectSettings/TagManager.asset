@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Barrier
   layers:
   - Default
   - TransparentFX
@@ -12,8 +13,8 @@ TagManager:
   - Water
   - UI
   - 
-  - 
-  - 
+  - SolidObjects
+  - interactables
   - 
   - 
   - 
@@ -41,6 +42,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Players
-    uniqueID: 736895865
+  - name: Background
+    uniqueID: 2575322367
+    locked: 0
+  - name: Foreground
+    uniqueID: 3405435911
+    locked: 0
+  - name: Player
+    uniqueID: 470057663
     locked: 0
