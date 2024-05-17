@@ -782,7 +782,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 576493723}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1529470716}
+        m_TargetAssemblyTypeName: PlayerFighter, Assembly-CSharp
+        m_MethodName: ActionSkill
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &576493723
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -812,7 +824,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  m_PixelsPerUnitMultiplier: 4
 --- !u!222 &576493724
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -853,7 +865,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   idName: Azul
   statusPanel: {fileID: 2106536775}
-  combbatManager: {fileID: 1740589073}
+  combatManager: {fileID: 1740589073}
 --- !u!212 &845871979
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -958,6 +970,56 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1062529716
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1062529717}
+  - component: {fileID: 1062529718}
+  m_Layer: 0
+  m_Name: Life
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1062529717
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1062529716}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1888510629}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1062529718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1062529716}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 625303fdb96fd81409ae4290a3e3d27b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillName: Life
+  animationDuration: 1
+  selfInFlicted: 1
+  effectPrfb: {fileID: 1545806602296978, guid: 9e4577abe56a95f4a91d29a0473cd30c, type: 3}
+  amount: 15
+  mode: 2
 --- !u!1 &1148832146
 GameObject:
   m_ObjectHideFlags: 0
@@ -1005,8 +1067,8 @@ MonoBehaviour:
   skillName: Health
   animationDuration: 1
   selfInFlicted: 1
-  effectPrfb: {fileID: 1545806602296978, guid: 9e4577abe56a95f4a91d29a0473cd30c, type: 3}
-  amount: 1
+  effectPrfb: {fileID: 100018, guid: a40b64bf23366dc42a892af2c6ff6140, type: 3}
+  amount: 10
   mode: 2
 --- !u!1 &1286136745
 GameObject:
@@ -1580,7 +1642,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   idName: Rojo
   statusPanel: {fileID: 1668900338}
-  combbatManager: {fileID: 1740589073}
+  combatManager: {fileID: 1740589073}
   skillPanel: {fileID: 141312856}
 --- !u!212 &1529470717
 SpriteRenderer:
@@ -1732,7 +1794,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1565267689}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1529470716}
+        m_TargetAssemblyTypeName: PlayerFighter, Assembly-CSharp
+        m_MethodName: ActionSkill
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1565267689
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1818,8 +1892,8 @@ MonoBehaviour:
   skillName: Fury
   animationDuration: 1
   selfInFlicted: 0
-  effectPrfb: {fileID: 1247311384876784, guid: 4adffb0018aeda44e9263f901167af1f, type: 3}
-  amount: -50
+  effectPrfb: {fileID: 100000, guid: f06e78284f831ae469c74624ab5d513b, type: 3}
+  amount: -21
   mode: 1
 --- !u!224 &1668900335 stripped
 RectTransform:
@@ -1951,6 +2025,7 @@ Transform:
   m_Children:
   - {fileID: 2090351791}
   - {fileID: 2112143715}
+  - {fileID: 1062529717}
   m_Father: {fileID: 845871980}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1961121378
@@ -1966,7 +2041,7 @@ GameObject:
   - component: {fileID: 1961121380}
   - component: {fileID: 1961121379}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: CanvasCombat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2179,7 +2254,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2084406133}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1529470716}
+        m_TargetAssemblyTypeName: PlayerFighter, Assembly-CSharp
+        m_MethodName: ActionSkill
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2084406133
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2209,7 +2296,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  m_PixelsPerUnitMultiplier: 2
 --- !u!222 &2084406134
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2229,7 +2316,7 @@ GameObject:
   - component: {fileID: 2090351791}
   - component: {fileID: 2090351792}
   m_Layer: 0
-  m_Name: Attack1
+  m_Name: Venom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2262,11 +2349,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 625303fdb96fd81409ae4290a3e3d27b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: Attack1
+  skillName: Venom
   animationDuration: 1
   selfInFlicted: 0
-  effectPrfb: {fileID: 0}
-  amount: -20
+  effectPrfb: {fileID: 1247311384876784, guid: 4adffb0018aeda44e9263f901167af1f, type: 3}
+  amount: -100
   mode: 0
 --- !u!1 &2106416732
 GameObject:
@@ -2350,7 +2437,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2106416735}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1529470716}
+        m_TargetAssemblyTypeName: PlayerFighter, Assembly-CSharp
+        m_MethodName: ActionSkill
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2106416735
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2380,7 +2479,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  m_PixelsPerUnitMultiplier: 3
 --- !u!222 &2106416736
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2521,7 +2620,7 @@ GameObject:
   - component: {fileID: 2112143715}
   - component: {fileID: 2112143716}
   m_Layer: 0
-  m_Name: Attack2
+  m_Name: End
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2554,12 +2653,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 625303fdb96fd81409ae4290a3e3d27b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: Attack2
+  skillName: 'End '
   animationDuration: 1
   selfInFlicted: 0
-  effectPrfb: {fileID: 0}
-  amount: -10
-  mode: 0
+  effectPrfb: {fileID: 1892078723244562, guid: 46876a2780737ec45a19d62f88e5ce56, type: 3}
+  amount: -37
+  mode: 1
 --- !u!1 &2145815716
 GameObject:
   m_ObjectHideFlags: 0
@@ -2608,7 +2707,7 @@ MonoBehaviour:
   animationDuration: 1
   selfInFlicted: 0
   effectPrfb: {fileID: 100004, guid: f95ff734540a0d749be6571b6cb5b37f, type: 3}
-  amount: -10
+  amount: -65
   mode: 0
 --- !u!1001 &3464471684987750298
 PrefabInstance:

@@ -22,4 +22,17 @@ public class PlayerFighter : Fighter
             this.skillPanel.ConfigureButtons(i, this.skills[i].skillName);
         }
     }
+
+
+
+    public void ActionSkill(int index)
+    {
+        this.skillPanel.Hide();
+
+        Skill skill = this.skills[index];
+
+        skill.SetEmiterAndReceiver(this, this.combatManager.EnemyFighter());
+
+       this.combatManager.OnSkill(skill);
+    }
 }

@@ -3,7 +3,7 @@ using UnityEngine;
 
 public enum HealthMode //El ENUM es una clase que representa constantes (variables inmutarbles / solo de lectura)
 {
-    Statbase, Fixed, Percentage
+    Stats_Attack, Fixed_Punch, Life_Percentages
 }
 
 public class HealthSkill : Skill
@@ -23,20 +23,20 @@ public class HealthSkill : Skill
     {
         switch (this.mode)
         {
-            case HealthMode.Statbase:
+            case HealthMode.Stats_Attack:
                 Stats emiterStats = this.emiter.GetCurrentStats();
                 Stats receiverStats = this.receiver.GetCurrentStats();
 
                 float rawDamage = (((2 * emiterStats.level) / 5) + 2) * this.amount * (emiterStats.attack / receiverStats.deffense);
                 return (rawDamage / 50) + 2;
 
-            case HealthMode.Fixed:
+            case HealthMode.Fixed_Punch:
                 return this.amount;
 
-            case HealthMode.Percentage:
+            case HealthMode.Life_Percentages:
                 Stats rstats = this.receiver.GetCurrentStats();
 
-                return rstats.maxHealth * this.amount;
+                return (rstats.maxHealth / this.amount);
         }
         
         throw new System.InvalidOperationException("HealtSkill. Unreachable!"); //Sirve para que el llenar todas las rutas del programa,

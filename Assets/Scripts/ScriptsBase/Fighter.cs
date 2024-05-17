@@ -7,7 +7,7 @@ public abstract class Fighter : MonoBehaviour
     public string idName;
     public StatusPanel statusPanel;
 
-    public CombatManager combbatManager;
+    public CombatManager combatManager;
 
     public Stats stats;
 
