@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
+
 {
 
     [SerializeField] GameObject DialogueBox;
@@ -12,6 +13,8 @@ public class DialogueManager : MonoBehaviour
 
     [SerializeField] int lettersPersecond;
 
+    public AudioSource audioSOURCE;
+    public AudioClip talk;
     public event Action OnShowDialogue;
     public event Action OnHideDialogue;
 
@@ -61,6 +64,8 @@ private void Awake()
         DialogueText.text = "";
         foreach(var letter in line.ToCharArray())
         {
+            audioSOURCE.PlayOneShot(talk);
+
             DialogueText.text += letter;
             yield return new WaitForSeconds(1f / lettersPersecond);
         }
