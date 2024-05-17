@@ -36,7 +36,7 @@ private void Awake()
 
         this.dialogue = dialogue;
         DialogueBox.SetActive(true);
-        StartCoroutine(TypeDialogue(dialogue.Lines[0]));
+        yield return StartCoroutine(TypeDialogue(dialogue.Lines[0]));
     }
 
     public void HandleUpdate()
