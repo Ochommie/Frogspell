@@ -20,14 +20,13 @@ public class GuardController : MonoBehaviour, INteractable
         }
 
     }
-    private IEnumerable RoutineWraper()
+    private void RoutineWraper()
     {
         Debug.Log("Guardia");
-        return null;
-        /*yield return StartCoroutine(DialogueManager.Instance.ShowDialogue(dialog[dialogIndex]));
+        StartCoroutine(DialogueManager.Instance.ShowDialogue(dialog[dialogIndex]));
         if (dialogIndex == 0)
         {
             SceneManager.LoadScene("Scenes/Quiz", LoadSceneMode.Additive);
-        }*/
+        }
     }
 }
