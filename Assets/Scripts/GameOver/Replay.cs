@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class LosePanel : MonoBehaviour
+public class Replay : MonoBehaviour
 {
-    public void LoseGame()
+  public void GAME_AGAIN()
     {
-        SceneManager.LoadScene("Combat Scene"); 
+        SceneManager.LoadScene("CombatScene");
+     
     }
 }
