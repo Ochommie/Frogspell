@@ -5361,7 +5361,7 @@ GameObject:
   - component: {fileID: 721893458}
   - component: {fileID: 721893457}
   - component: {fileID: 721893456}
-  - component: {fileID: 721893455}
+  - component: {fileID: 721893460}
   m_Layer: 8
   m_Name: Wizard
   m_TagString: Untagged
@@ -5369,22 +5369,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &721893455
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 721893454}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 32220717c2af74a2c8a315666034d69b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialog:
-    lines:
-    - It seem you found me little frogs
-    - NOW PREPARE FOR BATTLE
 --- !u!61 &721893456
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5524,6 +5508,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &721893460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 721893454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 130dcb4786f7ad247a292ccad8dc3468, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialog:
+  - lines: []
 --- !u!1 &776135340
 GameObject:
   m_ObjectHideFlags: 0
@@ -6255,11 +6253,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialog:
-    lines:
-    - Welcome to Frogspell
-    - Use the arrow keys to move around
-    - Use Z to talk to others
-    - May your path be secure traveler
+  - lines: []
 --- !u!1 &1031458233
 GameObject:
   m_ObjectHideFlags: 0
@@ -6714,7 +6708,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 88387e882da824b49bc3090330b6dd03, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.104
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -6970,10 +6964,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialog:
-    lines:
-    - The guard protects the wizard
-    - Pass his quiz to proceed
-    - Perhaps the anwer is easier than it seems...
+  - lines: []
 --- !u!1 &1734957319
 GameObject:
   m_ObjectHideFlags: 0

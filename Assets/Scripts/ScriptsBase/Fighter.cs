@@ -16,6 +16,8 @@ public abstract class Fighter : MonoBehaviour
     public bool isAlive
     {
         get => this.stats.health > 0;// Para saber si el personaje sigue vivo
+
+
     }
 
     protected virtual void Start()
