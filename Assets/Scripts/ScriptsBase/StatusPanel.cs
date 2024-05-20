@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class StatusPanel : MonoBehaviour
 {
@@ -33,5 +34,6 @@ public class StatusPanel : MonoBehaviour
         {
             this.healthSliderBar.color = Color.Lerp(Color.green, Color.red, healthSlider.value / 100);
         }
+
     }
 }

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GuardController : MonoBehaviour, INteractable
+public class WizardDialogue : MonoBehaviour, INteractable
 {
     int dialogIndex = 0;
     [SerializeField] Dialogue[] dialog;
@@ -20,14 +20,14 @@ public class GuardController : MonoBehaviour, INteractable
         }
 
     }
-    
     private void RoutineWraper()
     {
-        Debug.Log("Guardia");
+        Debug.Log("Mago");
         StartCoroutine(DialogueManager.Instance.ShowDialogue(dialog[dialogIndex]));
         if (dialogIndex == 0)
         {
-            SceneManager.LoadScene("Scenes/Quiz", LoadSceneMode.Single);
+            SceneManager.LoadScene("Scenes/CombatScene", LoadSceneMode.Single);
         }
     }
 }
+

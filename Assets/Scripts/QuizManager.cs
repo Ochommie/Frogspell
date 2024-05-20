@@ -38,6 +38,8 @@ public class QuizManager : MonoBehaviour
         QuizPanel.SetActive(false);
         GoPanel.SetActive(true);
         ScoreTxt.text = score + "/" + totalQuestions;
+
+   
     }
 
     public void correct()
@@ -54,6 +56,7 @@ public class QuizManager : MonoBehaviour
         QnA.RemoveAt(currentQuestion);
         generateQuestion();
     }
+
     void SetAnswers()
     {
         for (int i = 0; i < options.Length; i++)
@@ -65,7 +68,10 @@ public class QuizManager : MonoBehaviour
             {
                 options[i].GetComponent<AnswerScript>().isCorrect = true;
             }
+
+           
         }
+
     }
 
     void generateQuestion()
