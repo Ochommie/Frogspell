@@ -10,8 +10,16 @@ public class PlayerMovement : MonoBehaviour
     public LayerMask solidObjectsLayer;
 
     public LayerMask interactablesLayer;
+    public AudioSource audiosource;
+    public AudioSource EFFECTS;
+    public AudioClip interaction;
 
-    public void Update()
+    private void Start()
+    {
+        audiosource = GetComponent<AudioSource>();
+    }
+
+    public void HandleUpdate()
     {
         if (!isMoving)
         {
@@ -30,8 +38,16 @@ public class PlayerMovement : MonoBehaviour
                 targetPos.x += input.x;
                 targetPos.y += input.y;
 
+                audiosource.enabled = true;
+
+
                 if (IsWalkable(targetPos))
                     StartCoroutine(Move(targetPos));
+            }
+            else
+            {
+                audiosource.enabled = false ;
+
             }
         }
 
@@ -52,8 +68,10 @@ public class PlayerMovement : MonoBehaviour
         var collider = Physics2D.OverlapCircle(interactPos, 1f, interactablesLayer);
         if (collider != null)
         {
+            EFFECTS.PlayOneShot(interaction);
             collider.GetComponent<INteractable>()?.Interact();
         }
+        
 
     }
 
@@ -67,7 +85,10 @@ public class PlayerMovement : MonoBehaviour
         }
         transform.position = targetPos;
 
+       
+      
         isMoving = false;
+
     }
 
     private bool IsWalkable(Vector3 targetPos)
