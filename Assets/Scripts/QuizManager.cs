@@ -31,6 +31,10 @@ public class QuizManager : MonoBehaviour
         var lastSceneIndex = SceneManager.sceneCount - 1;
         var lastLoadedScene = SceneManager.GetSceneAt(lastSceneIndex);
         SceneManager.UnloadSceneAsync(lastLoadedScene);
+        var barrier = GameObject.FindGameObjectWithTag("Barrier");
+        GameObject.DestroyImmediate(barrier);
+        var guard = GameObject.FindGameObjectWithTag("Guard");
+        guard.GetComponent<GuardController>().hasPassed = true;
     }
 
    void GameOver()

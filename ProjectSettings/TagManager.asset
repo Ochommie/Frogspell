@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Barrier
+  - Guard
   layers:
   - Default
   - TransparentFX
@@ -50,4 +51,10 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 470057663
+    locked: 0
+  - name: Leaves
+    uniqueID: 2668722837
+    locked: 0
+  - name: Leaves2
+    uniqueID: 2282336673
     locked: 0

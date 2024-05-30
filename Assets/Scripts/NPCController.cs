@@ -13,7 +13,7 @@ public class NPCController : MonoBehaviour, INteractable
     {
 
         StartCoroutine(DialogueManager.Instance.ShowDialogue(dialog[dialogIndex]));
-        if (dialogIndex<=dialog.Length)
+        if (dialogIndex<dialog.Length-1)
         dialogIndex++;
     }
 }

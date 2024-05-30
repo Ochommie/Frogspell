@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class GuardController : MonoBehaviour, INteractable
 {
     int dialogIndex = 0;
+    public bool hasPassed = false;
     [SerializeField] Dialogue[] dialog;
 
     public void Interact()
@@ -14,7 +15,7 @@ public class GuardController : MonoBehaviour, INteractable
     {
         Debug.Log("Funciona");
         RoutineWraper();
-        if (dialogIndex <= dialog.Length)
+        if (dialogIndex < dialog.Length-1)
         {
             dialogIndex++;
         }
@@ -25,9 +26,9 @@ public class GuardController : MonoBehaviour, INteractable
     {
         Debug.Log("Guardia");
         StartCoroutine(DialogueManager.Instance.ShowDialogue(dialog[dialogIndex]));
-        if (dialogIndex == 0)
+        if (!hasPassed)
         {
-            SceneManager.LoadScene("Scenes/Quiz", LoadSceneMode.Single);
+            SceneManager.LoadScene("Scenes/Quiz", LoadSceneMode.Additive);
         }
     }
 }
