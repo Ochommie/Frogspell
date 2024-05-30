@@ -27,7 +27,7 @@ public class GuardController : MonoBehaviour, INteractable
         StartCoroutine(DialogueManager.Instance.ShowDialogue(dialog[dialogIndex]));
         if (dialogIndex == 0)
         {
-            SceneManager.LoadScene("Scenes/Quiz", LoadSceneMode.Single);
+            SceneManager.LoadScene("Scenes/Quiz", LoadSceneMode.Additive);
         }
     }
 }
