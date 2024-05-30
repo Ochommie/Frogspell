@@ -998,10 +998,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialog:
   - lines:
-    - HAIL THERE TRESSPASSER
-    - To proceed, you must answer thy question
-    - Perhaps your feeble brain will undertand it
-  - lines:
     - It seems you are smart
     - Even for a tiny little guy
     - You can proceed to your battle
@@ -6253,7 +6249,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialog:
-  - lines: []
+  - lines:
+    - Welcome to Frogspell
+    - Use the arrows to move around
+    - Use "Z" to talk to others
+    - May your journey be safe
 --- !u!1 &1031458233
 GameObject:
   m_ObjectHideFlags: 0
@@ -6964,7 +6964,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialog:
-  - lines: []
+  - lines:
+    - The guard is blocking the path
+    - Complete his quiz to fight the wizard
+    - 'Perhaps the answer its easier than it seems '
 --- !u!1 &1734957319
 GameObject:
   m_ObjectHideFlags: 0
