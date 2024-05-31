@@ -1165,7 +1165,7 @@ MonoBehaviour:
   animationDuration: 1
   selfInFlicted: 1
   effectPrfb: {fileID: 100018, guid: a40b64bf23366dc42a892af2c6ff6140, type: 3}
-  amount: 10
+  amount: 5
   mode: 2
 --- !u!1 &1286136745
 GameObject:
@@ -1330,7 +1330,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1972107667}
   - {fileID: 2145815717}
   - {fileID: 1148832147}
   - {fileID: 1635781781}
@@ -1891,6 +1890,7 @@ Transform:
   m_LocalScale: {x: 27.389198, y: 5.735235, z: 42.567}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1972107667}
   - {fileID: 1294236368}
   m_Father: {fileID: 1961121382}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2348,11 +2348,11 @@ Transform:
   m_GameObject: {fileID: 1972107666}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.00796, y: -0.08515, z: 0}
+  m_LocalPosition: {x: -0.007960078, y: -0.08515085, z: 0}
   m_LocalScale: {x: 2.2339947, y: 8.877236, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1294236368}
+  m_Father: {fileID: 1529470718}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1972107668
 SpriteRenderer:
@@ -2927,7 +2927,7 @@ MonoBehaviour:
   animationDuration: 1
   selfInFlicted: 0
   effectPrfb: {fileID: 1892078723244562, guid: 46876a2780737ec45a19d62f88e5ce56, type: 3}
-  amount: -37
+  amount: -20
   mode: 1
 --- !u!1 &2145815716
 GameObject:

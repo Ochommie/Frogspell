@@ -999,7 +999,9 @@ MonoBehaviour:
   hasPassed: 0
   dialog:
   - lines:
-    - Quiz ahead
+    - HAIL THERE TRESSPASSER
+    - To proceed, you must answer thy question
+    - Perhaps your feeble brain will undertand it
   - lines:
     - It seems you are smart
     - Even for a tiny little guy
